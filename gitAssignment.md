@@ -60,7 +60,6 @@ R: Mostra os três últimos commits apresentando quem fez, quando fez e o nome d
 2. Tente usar `git log --graph --all`. O que acontece?
 ```
 $ git log --graph --all
-$ git log --graph --all
 * commit f67f266cf420735187053f10d32e2c0f7cbc5a43 (master)
 | Author: Igor Steinmacher <igorsteinmacher@gmail.com>
 | Date:   Fri Aug 24 15:30:05 2018 -0700
@@ -82,8 +81,10 @@ $ git log --graph --all
 * commit 9c1eeb8901b0926ce7fa13cc6ce0a1876fc4179b
   Author: Igor Steinmacher <igorsteinmacher@gmail.com>
   Date:   Fri Aug 24 15:26:44 2018 -0700
+  
+      Creating all files (all empty)
 
-R: Apresenta os commits que nem o anterior, e também retorna informações dos commits "pais".
+R: Apresenta os commits e retorna informações dos commits antecessores.
 ```
 
 3. Use `git diff BRANCH_NAME`  para ver as diferenças de um ramo e do ramo atual.
@@ -158,7 +159,7 @@ System.out.println(2+2)
 7. Escreva o comando (ou sequencia) para realizar o commit de suas mudanças
 ```
 $ git commit -a -m 'Adicionando prints'
-[math b75d2eb] Adicionando prints
+[math 0de7862] Adicionando prints
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 R: Se não foi criado nenhum arquivo, caso contrário são os comandos abaixo.
@@ -175,7 +176,7 @@ System.out.println("Hello World")
 9. Escreva uma sequência de comando para mesclar o branch `math` em` master` e descreva o que aconteceu
 ```
 $ git commit -a -m 'Adicionando prints'
-[master 0d0dd5d] Adicionando prints
+[master 4379fac] Adicionando prints
  1 file changed, 1 insertion(+), 2 deletions(-)
 
 $ git merge math
@@ -230,30 +231,23 @@ public class B {
 }
 
 $ git commit -a -m 'Arrumando conflito'
-[master 9765398] Arrumando conflito
+[master 0579ed7] Arrumando conflito
 
 ```
 
 12. Escreva um comando (ou conjunto de comandos) para prosseguir com a mesclagem e atualizar o branch `master`
 ```
-git push -u origin master
-it push -u origin master
+$ git push
 Username for 'https://github.com': xaaaandao
 Password for 'https://xaaaandao@github.com': 
-Enumerating objects: 21, done.
-Counting objects: 100% (21/21), done.
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
 Delta compression using up to 12 threads
-Compressing objects: 100% (18/18), done.
-Writing objects: 100% (21/21), 1.91 KiB | 1.91 MiB/s, done.
-Total 21 (delta 3), reused 0 (delta 0)
-remote: Resolving deltas: 100% (3/3), done.
-remote: 
-remote: Create a pull request for 'master' on GitHub by visiting:
-remote:      https://github.com/xaaaandao/gitAssignment/pull/new/master
-remote: 
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.97 KiB | 2.97 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
 To https://github.com/xaaaandao/gitAssignment.git
- * [new branch]      master -> master
-Branch 'master' set up to track remote branch 'master' from 'origin'.
+   38c6e6d..e97b47f  main -> main
 ```
 
 
